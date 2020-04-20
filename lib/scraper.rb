@@ -17,6 +17,7 @@ class Scraper
 
   def get_pokemon_name_from(node)
     node.css(".ent-name").text
+    binding.pry
   end
 
   def get_pokemon_type_from(node)
