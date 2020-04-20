@@ -33,3 +33,5 @@ class Scraper
   end
 
 end
+
+scraper = Scraper.new(SQLite3::Database.new(':memory:'))
