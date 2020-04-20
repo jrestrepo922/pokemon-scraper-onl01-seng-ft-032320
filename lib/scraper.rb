@@ -8,7 +8,6 @@ class Scraper
     self.file = File.open("pokemon_index.html")
     self.parsed_file = Nokogiri::HTML.parse(file)
     self.all_pokemon = catch_em_all
-    binding.pry
   end
 
   def catch_em_all
@@ -17,7 +16,6 @@ class Scraper
 
   def get_pokemon_name_from(node)
     node.css(".ent-name").text
-    binding.pry
   end
 
   def get_pokemon_type_from(node)
@@ -33,5 +31,3 @@ class Scraper
   end
 
 end
-
-scraper = Scraper.new(SQLite3::Database.new(':memory:'))
