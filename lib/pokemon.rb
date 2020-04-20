@@ -7,6 +7,7 @@ class Pokemon
     @type = type
     @id = id
     @db = db
+    binding.pry
   end
 
 
